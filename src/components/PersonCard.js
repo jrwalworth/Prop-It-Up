@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-const PersonCard = (props) => {
-    const {firstName, lastName, age, hairColor} = props;
-    return (
-        <div className="Person">
-            <h2>{lastName}, {firstName}</h2>
-            <div>
-                <p>Age: {age}</p>
-                <p>Hair Color: {hairColor}</p>
+class PersonCard extends Component {
+    render() {
+        const {firstName, lastName, age, hairColor} = this.props;
+        return (
+            <div className="Person">
+                <h2>{lastName}, {firstName}</h2>
+                <div>
+                    <p>Age: {age}</p>
+                    <p>Hair Color: {hairColor}</p>
+                </div>
             </div>
-        </div>
-    )
-    
+        );
+    };
 }
 
 export default PersonCard;
